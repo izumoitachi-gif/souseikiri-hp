@@ -245,7 +245,7 @@ h1, h2, h3, .big-num, .tl-year, .hero-sub, .btn-scroll, .btn-cta {
 /* 動画シーケンス */
 .video-seq {
   position: relative;
-  width: 180px;
+  width: 270px;
   flex-shrink: 0;
 }
 
