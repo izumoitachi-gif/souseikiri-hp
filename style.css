@@ -610,11 +610,23 @@ h1, h2, h3, .big-num, .tl-year, .hero-sub, .btn-scroll, .btn-cta {
   }
   .timeline-content { width: auto; }
 
-  /* 動画・スライダー：モバイルは全幅 */
-  .video-seq        { max-width: 100%; }
-  .video-seq video  { height: 200px; }
-  .photo-slider     { max-width: 100%; }
-  .photo-slides     { height: 200px; }
+  /* tl-photosをflexから切り離して全幅に */
+  .tl-photos {
+    flex: none;
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* 動画：モバイルはaspect-ratio維持・全幅 */
+  .video-seq        { width: 100%; max-width: 100%; }
+  .video-seq video  { aspect-ratio: 9/16; height: auto; }
+
+  /* スライダー：全幅・高さ固定 */
+  .photo-slider     { width: 100%; max-width: 100%; }
+  .photo-slides     { height: 220px; }
+
+  /* single画像も全幅 */
+  .tl-photos.single img { max-width: 100%; height: 200px; }
 
   /* ロケーションカード */
   .loc-grid { grid-template-columns: 1fr; }
