@@ -1,0 +1,4 @@
+.obsidian/
+*.md.bak
+.DS_Store
+Thumbs.db
