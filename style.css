@@ -242,6 +242,37 @@ h1, h2, h3, .big-num, .tl-year, .hero-sub, .btn-scroll, .btn-cta {
   box-shadow: 0 6px 24px rgba(0,0,0,.35);
 }
 
+/* 動画シーケンス */
+.video-seq {
+  position: relative;
+  max-width: 380px;
+}
+
+.video-seq video {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  box-shadow: 0 6px 24px rgba(0,0,0,.35);
+}
+
+.video-seq-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 0; right: 0;
+  text-align: center;
+}
+
+.vdot {
+  display: inline-block;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.4);
+  margin: 0 3px;
+}
+.vdot.active { background: var(--gold); }
+
 /* スライダー */
 .photo-slider {
   position: relative;

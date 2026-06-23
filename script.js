@@ -38,3 +38,19 @@ document.querySelectorAll('.photo-slider').forEach(slider => {
 
   startAuto();
 });
+
+// 地拵え動画 順番再生（音なし・自動）
+const jikoshiraVideo = document.getElementById('jikoshira-video');
+if (jikoshiraVideo) {
+  const srcs = ['videos/jikoshira-1.mp4', 'videos/jikoshira-2.mp4', 'videos/jikoshira-3.mp4'];
+  const vdots = document.querySelectorAll('.vdot');
+  let vcur = 0;
+
+  jikoshiraVideo.addEventListener('ended', () => {
+    if (vdots[vcur]) vdots[vcur].classList.remove('active');
+    vcur = (vcur + 1) % srcs.length;
+    jikoshiraVideo.src = srcs[vcur];
+    if (vdots[vcur]) vdots[vcur].classList.add('active');
+    jikoshiraVideo.play();
+  });
+}
